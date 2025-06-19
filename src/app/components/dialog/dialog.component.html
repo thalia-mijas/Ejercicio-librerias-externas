@@ -1,0 +1,44 @@
+<form [formGroup]="form">
+  <mat-dialog-content>
+    <p>Por favor, rellena los siguientes campos:</p>
+
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre:</mat-label>
+        <input matInput formControlName="name" />
+        <mat-error *ngIf="form.get('name')?.hasError('required')">
+          El nombre es obligatorio
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Correo electrónico:</mat-label>
+        <input matInput formControlName="email" />
+        <mat-error *ngIf="form.get('email')?.hasError('required')">
+          El correo es obligatorio
+        </mat-error>
+        <mat-error *ngIf="form.get('email')?.hasError('email')">
+          Correo no válido
+        </mat-error>
+      </mat-form-field>
+    </div>
+    
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Dirección:</mat-label>
+        <input matInput formControlName="direction" />
+        <mat-error *ngIf="form.get('direction')?.hasError('required')">
+            La dirección es obligatoria
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close>No gracias</button>
+    <button mat-button (click)="submit()" [disabled]="form.invalid" cdkFocusInitial>Listo</button>
+  </mat-dialog-actions>
+</form>
