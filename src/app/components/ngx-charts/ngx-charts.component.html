@@ -1,1 +1,31 @@
-<p>ngx-charts works!</p>
+<h2>Evolución de usuarios de lenguajes de programación</h2>
+<h3>Line Chart</h3>
+<div style="width: 500px;">
+  <ngx-charts-line-chart
+    [results]="multi"
+    [legend]="showLegend"
+    [legendTitle]="legendTitle"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [xAxisLabel]="xAxisLabelL"
+    [yAxisLabel]="yAxisLabelL"
+    [timeline]="timeline">
+  </ngx-charts-line-chart>
+</div>
+<h2>Lenguajes de programación más populares</h2>
+<h3>Vertical Bar Chart</h3>
+<div style="width: 500px;">
+  <ngx-charts-bar-vertical
+    [results]="data"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [legendTitle]="legendTitle"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel">
+  </ngx-charts-bar-vertical>
+</div>
