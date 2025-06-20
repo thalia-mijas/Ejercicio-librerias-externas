@@ -1,6 +1,12 @@
-app-ngx-charts {
+app-ang-materials, app-ngx-charts {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+}
+h2 {
+  font-size: x-large !important;
+}
+h3 {
+  font-size: large !important;
 }
